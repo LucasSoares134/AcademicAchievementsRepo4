@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function acendeLampada (){
+            document.getElementById("luz").src ="_imagens/lampada-acesa.jpg"
+        }
+        function apagaLampada (){
+            document.getElementById("luz").src ="_imagens/lampada-apagada.jpg"
+        }
+        function quebraLampada (){
+            document.getElementById("luz").src ="_imagens/lampada-quebrada.jpg"
+        }
+        /*Foi declarado 3 funções, onde o documento com id "Luz", vai mudar de valor (sobrecarga), conforme o metodo que for chamado. Esse método
+        esse método será acionado, e chamara a funçaão, conforme cada evento. Move, "desmover" e clicar*/
+
+    
+    </script><!--conjunto de acontecimentos que iram acontecer-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test JS</title>
+</head>
+<body>
+    <h1>Acenda a lampada</h1>
+    <img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove ="acendeLampada()" onmouseout="apagaLampada()" onclick="quebraLampada()"/><!--Em geral, no código, o java script foi usado para criar métodos que alteracem a
+imagem que vai aparecer na tela. É OBRIGATORIO COLOCOAR O "()" NA CHAMA DO OBJEOT, PARA CASO DE PASSAR UM NOVO PARAMETRO...-->
+</body>
+</html>

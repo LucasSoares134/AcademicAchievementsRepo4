@@ -1,0 +1,242 @@
+@charset "UTF-8";
+@import url(http://www.fonts.googleapis.com/css?family=Titillium+Web); /*fonte direta do google.*/
+
+@font-face{
+font-family: 'FonteLogo';/*nome do aequivo pra fonte*/
+src: url("../_fonts/bubblegum-sans-regular.otf");/*local onde se encontra*/   
+}
+/*Padrão assentuetion*/
+p {/*Formatação dos parágrados*/
+    text-align: justify;/*Justifica*/
+    text-indent: 50px;}/*Espaciamento inicial do textao*/
+h1 { text-align: left;} /*alinha todos os titulos de h1 a esquerda*/
+body{    
+    font-family: Arial, Helvetica, sans-serif;/*definando uma fonte geral para o código e tirando a serifa*/
+    background-color: #dddddd;/*fundo do site*/
+   color: rgba(0,0,0,1); /*padroes de cor e transparencia*/
+}
+/*config interface*/
+a{
+    color:yellowgreen;
+    text-decoration: none;
+
+}/*configurando os links*/
+
+
+a:hover{ 
+text-decoration:underline ;
+}
+
+
+div#interface{
+width: 900px;/*preenchimento da interface*/
+background-color: #ffffff;/*cor do preenchimento*/
+margin: -20px/*Cima*/ auto/*direita*/ 0px/*baixo*/ auto/*Esquerda*/;
+box-shadow: 0px 0px 10px rgba(0,0,0,0.5);/*caixa de sombreamento*/
+padding: 10px;/*Se todos os valores, forem o mesmo, basta aepnas por uma vez*/
+}
+header#cabecalho img#icone{/*associei a classe de icone a imagem*/
+position:absolute;/*posição do oculos*/
+left:900px;/*distancia lateral*/
+top: 70px;/*distancia de cima*/
+}
+header#cabecalho{
+    border-bottom: 1px #606060 solid;/*divisão*/
+height:150px;/*Espaciamento*/
+background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;/*.. é para voltar no diretório
+e apontar o caminho---- o no-repeat, é para imagem não repitir e ao lado o parametro de onde vai ficar a imagem*/
+
+}
+header#cabecalho h1{
+    font-family: 'FonteLogo', Helvetica, sans-serif;/*tipo de fonte*/
+    font-size: 30px;/*tamanho da fonte*/
+    color: #606060;/*cor da fonte*/
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);/*efeito de sombreamento*/
+    padding: 0px;/*preenchimento*/
+    margin-bottom: 0px;/*trabalhar com margem especifica, pode usar left e right*/
+}
+header#cabecalho h2{
+    font-family: 'Titillium Web', sans-serif;/*tipo de fonte*/
+    color: #888888;/*cor*/
+    font-size: 15pt;/*outra forma de tamanho*/
+    padding: 0px;/*preenchimento*/
+    margin-top: 0px;/*margem de cima*/
+}  
+/*Formatação referentes a fotos*/
+figure.foto-legenda{/*classe da foto, com formatação padronizada*/
+    position: relative; /*posição onde a imagem ira ficar no código
+    html. Fica presa a um container "relativo a sua posição no código"*/
+    border: 3px solid white;/*borda*/
+    box-shadow: 1px 1px 4pc black; /*efeito de sombreamento*/
+
+}
+figure.foto-legenda img{/*atribuição de tudo que for referente a imagem*/
+    width: 100%;/*preenchimento de largura*/
+    height: 100%;/*preenchimento de altura*/
+    }
+figure.foto-legenda figcaption{/*configurações e efeitos da legenda*/
+    opacity: 0;/*legenda com opacidade total*/
+    position: absolute;/*posição onde a legenda vai ficar em qualquer lugar*/
+    top:0px;/*localização*/
+    background-color: rgba(0,0,0,0.4);/*fundo da legenda na imagem*/
+    color: white;/*Cor da legenda*/
+    width: 100%;/*Preenchimento da legenda na imagem, largura*/
+    height: 100%;/*Mesmo de cima, altura*/
+    padding: 10px;/*tamanho da legenda*/
+    box-sizing:border-box;/*(efeito caixa,junta o efeito e a imagem tudo em uma caixa só)*/
+    transition: opacity 2s;/*tempo para legenda da imagem aparecer*/
+}
+/*teria como adicionar todos esses efeitos em outras imagens, seria apenas adicionar uma atag figure com a classe e um figurecaptom, com a legenda*/
+figure.foto-legenda:hover/*efeito ao passar o mouse*/ figcaption/*função que estamos usando, no caso, legenda da figurs*/ {
+/*efeito de fluturar, para aparecer a imagem, ao passar o mouse por cima..*/
+opacity: 1;/*ao passar, alteraremos a opacidade para....*/
+
+}
+
+/*Dá para adicionar toda essa configuração em outras imagens, bastaria criar as tag figure e figcaption e chamar a classe 
+dentro da tag figure. pronto papai, pega todas as config*/
+
+/*Formatação do menu*/
+nav#menu {
+    display: block;/*elemento de bloco que ocupa todo seu espace */
+}
+nav#menu ol{
+list-style: none;/*Sumir com os marcadores*/
+text-transform: uppercase;/*Caixa alta*/
+position: absolute;
+top: -20px;/*Margem do topo da página*/
+left: 500px;/*Margem da direita*/
+}
+nav#menu li{/*Configuação da lista*/
+    display: inline-block;/*Criar uma borda sobre as listas*/
+    background-color: orange;/*Cor das bordas da caixa*/
+    padding: 10px;/*espaço de dentro*/
+    margin: 2px;/*Margem entre os campos, parte de fora*/
+    transition: background-color 2s;/*transição da cor preta*/
+}
+nav#menu li:hover{
+    background-color: #606060;
+ }/*efeito de passar o mouse, escurece na tela...*/
+nav#menu h1{
+    display: none;/*o elemento não deve ser exibido na página*/
+}/*configutação de todos h1*/
+nav#menu a{
+    color: #000000;/*Cor da letra do icone*/
+    text-decoration: none;/*Retira a decoração de _*/
+}/*Config dos h1 nas tag de navegação, refenten a "menu"*/
+nav#menu a:hover {/*efeito ao passar o mouse*/
+color:white;/*cor do efeito sobre*/
+text-decoration: underline;/*aparecer o _ ao passar o mouse*/
+}
+
+section#corpo{
+    /* definindo o layout das divisões da section.*/
+    display: block;
+    width: 500px;
+    float:left;
+    border-right: 1px solid #606060 ;
+    padding-right: 15px ;   
+}
+
+article#noticia-principal h2{/*Config dos h2 na classe noticia principal*/
+    font-size: 13pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+header#cabecalho-artigo h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+
+.adireita{
+    text-align: right;/*todas as a classes que contem ".direita"*/
+}
+header#cabecalho-artigo h2{
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+}
+header#cabecalho-artigo h3{
+    font-size: 12px;
+    color: #606060;
+}
+
+table#tablespec  {
+    border: 1px solid #606060;
+ padding: 10px;
+ text-align: center;/* alinhamento segunda coluna*/
+ vertical-align: center;/*alinhamento da primeira coluna*/
+}
+
+table#tabelaspec td{
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    /*configuração direta de todos os td*/
+}
+table#tabelaspec td.esquerda{
+color: #ffffff;
+background-color: #606060;
+vertical-align: top;
+/*classe sobrecarrega o parametro antigo passado*/
+font-weight: bold;
+/*configuração de todos os td da classe esquerda*/
+}
+table#tabelaspec td.direita{
+background-color: #cecece;
+font: arial;
+/*configuração de todos os "td" diretos*/
+}
+
+table#tabelaspec caption{/*Config da figura*/
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+table#tabelaspec caption span{
+    display: block;
+    float:right;
+    color: #000000;
+    font-size: 8pt;/*tamanho da fonte*/
+    margin-top: 10px;
+}
+
+aside#lateral{
+    /*"margem de um paragrafo"*/
+    display: block;
+    width: 350px;
+    float:right;
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;/*aside- config do aside do html*/
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+
+aside#lateral h1{ /*Config de aside lateral*/
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+}
+aside#lateral h2{
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
+}
+
+footer#rodape{/*Config, parte de baixo da pagina*/
+clear: both;
+border-top: 1px solid #606060 
+}
+footer#rodape p {
+text-align: center;
+}

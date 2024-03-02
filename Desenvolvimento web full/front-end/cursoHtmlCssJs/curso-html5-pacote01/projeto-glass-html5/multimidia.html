@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+    <meta charset="UTF=8"/>
+    <title>Tudo sobre Gloogle Glass</title>
+  <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+  <link rel="stylesheet" type="text/css" href="_css/media.css"/>
+<!--Arrumar conteudo do header, de acordo com o de fotos, já arrumado-->    
+</head>
+<script src="_javascript/funcoes.js"></script>
+
+<body>
+<div id="interface">
+    <header id="cabecalho">
+      <hgroup>
+<h1>Google Glass</h1>
+<h2>A revolução do Google está chegando</h2>
+     </hgroup>
+<img id="icone" src="_imagens/multimidia.png"/><!--Armazenagem da imagem-->
+<nav id="menu";>
+<h1>Menu Principal</h1><ol> 
+<li onmousemove="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/multimidia')"><a href=index.html></a><a href="index.html">Home</a></li>
+<li onmousemove="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href=index.html></a><a href="specs.html">Especificações</a></li>
+<li onmousemove="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href=index.html></a><a href="fotos.html">Fotos</a></li>
+<li onmousemove="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href=index.html></a><a href="multimidia.html">Multimídia</a></li>
+<li onmousemove="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href=index.html></a><a href="fale-conosco.html">Fale conosco</a></li>
+</ol></nav>
+</header>
+
+<section id="corpo-full">
+  <article id="noticia-principal">
+    <header id="cabecalho-artigo">
+    <hgroup>
+    <h3>Glass > Multimídia &nbsp;&nbsp;&nbsp;</h3><br>
+    <h1>Sons e Vídeos</h1>
+    <h2>por Lucas Soares</h2>
+    <h3 class="adireita">Atualizado em 01/Maio/2013</h3>
+    </hgroup>
+    </header>
+
+<div id="tv-radio">
+  <audio id="musica" controls="controls">
+    <source src="/Front end Web/cursoHtmlCssJs/curso-html5-pacote02/_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg"/>
+    <source src="/Front end Web/cursoHtmlCssJs/curso-html5-pacote02/_media/2009-lovers-carvings-bibio.m4a" type="audio/x-aac"/>
+    Desculpe, mas não foi possivel, reproduzir o áudio
+  </audio>
+  <video id="filme" controls="controls" poster="_imagens/video-mini03.jpg"><!--Bota o constrols, pra aparecer a moldurinha pra rodar o video, se n buga-->
+    <source src="/Front end Web/cursoHtmlCssJs/curso-html5-pacote02/_media/getting-started.mp4" type="video/mp4"/>
+    <source src="/Front end Web/cursoHtmlCssJs/curso-html5-pacote02/_media/getting-started.webmsd.webm" type="video/webm"/>
+    <source src="/Front end Web/cursoHtmlCssJs/curso-html5-pacote02/_media/getting-started.oggtheora.ogv" type="video/ogg"/>
+    Desculpe, mas não foi possivel, reproduzir o Video
+  </video>
+
+</div>
+
+<h3 id="youtube">&#128523; SINTA A PRESSÃO DO FUNK GOIANÃO BB &#128526; &#128576; &#128558;</h3><iframe id="youtube" width="560" height="350" src="https://www.youtube.com/embed/hvxWFsGBoJU?si=RxR6WTAzRlkS5q31" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<!--Opção de incorporar, direto do youtube-->
+
+<footer id="rodape">
+    <p> &copy;  Copyright 2023 - by Lucas Soares <br/>
+    <a href="http://facebook.com/cursosemvideos" target="_black">Facebook</a> | 
+    <a href="http://twittwe.com/cursosemvideos" target="_black">Twitter</a> </p>
+    </footer>
+    </div>
+    </body>
+    </html>
+    <!--COLOCAR OS VIDEOS DA PAGINA PRINCIPAL DE MESMO JEITO-->

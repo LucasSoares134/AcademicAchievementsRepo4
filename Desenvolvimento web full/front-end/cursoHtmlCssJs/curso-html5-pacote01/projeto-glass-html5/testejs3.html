@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var quebrada = false;
+        function mudaLampada (tipo){
+
+           if (!quebrada) { 
+            document.getElementById("luz").src = "_imagens/" + tipo + ".jpg";
+            if (tipo == "lampada-quebrada"){
+                quebrada = true;
+                alert ("Eita porra! VOCÊ! VOCÊ! 'CLICOU(BATEU)' na lampada.")
+                alert("AGORA ELA IRÁ SE QUEBRAR PARA SEMPRE :( :( :( ");//INVENÇÃO MINHA :)//
+            }
+        }
+     
+        }
+       
+
+    
+    </script><!--conjunto de acontecimentos que iram acontecer-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test JS</title>
+</head>
+<body>
+    <h1>Acenda a lampada</h1>
+    <img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove ="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick="mudaLampada('lampada-quebrada')"/><!-- diferença do código 2 é que, cada evento,
+        altera diretamente a imagem, A causalidade, se torna, apenas para deixar a lampada com status permanentemente "quebrada "".É OBRIGATORIO COLOCOAR O "()" NA CHAMA DO OBJEOT, PARA CASO DE PASSAR UM NOVO PARAMETRO...-->
+</body>
+</html>

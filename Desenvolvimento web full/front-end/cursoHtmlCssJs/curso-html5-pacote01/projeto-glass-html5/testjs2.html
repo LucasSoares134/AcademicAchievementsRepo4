@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var quebrada = false;
+        function mudaLampada (tipo){
+           if(tipo == 1){
+            arquivo = "_imagens/lampada-acesa.jpg";
+           }
+           if(tipo == 2){
+            arquivo ="_imagens/lampada-apagada.jpg";
+           }
+           if(tipo == 3){ 
+            arquivo = "_imagens/lampada-quebrada.jpg";
+       
+           }
+           if (!quebrada) { 
+            document.getElementById("luz").src = arquivo;
+            if (tipo == 3){
+                quebrada = true;
+                alert ("Eita porra! VOCÊ! VOCÊ! 'CLICOU(BATEU)' na lampada \o/ \o/")
+                alert("AGORA ELA IRÁ SE QUEBRAR PARA SEMPRE :( :( :( ");//INVENÇÃO MINHA :)
+    
+            }
+            
+        }
+     
+        }
+       ;/*Principal diferença é no metodo de açao, enquanto o 1 tem 3 funções com metos, esse tem somente 1 função
+       no Java Script. Onde essa função, cada uma tem uma condição. E essa condição chama, cada evento relacionado abaixo.*/
+
+    
+    </script><!--conjunto de acontecimentos que iram acontecer-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test JS</title>
+</head>
+<body>
+    <h1>Acenda a lampada</h1>
+    <img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove ="mudaLampada(1)" onmouseout="mudaLampada(2)" onclick="mudaLampada(3)"/><!--É OBRIGATORIO COLOCOAR O "()" NA CHAMA DO OBJEOT, PARA CASO DE PASSAR UM NOVO PARAMETRO...-->
+</body>
+</html>
